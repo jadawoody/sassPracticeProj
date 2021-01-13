@@ -1,0 +1,59 @@
+// THE SASS COURSE
+//brad hussey on youtube
+
+    
+// VARIABLES
+
+$bgColor: orangered
+$pale: #d2e1dd
+$bright: #d2e55d
+$blues: #003366
+$jazz: #7777dd
+$font-stack: 'Andale Mono', monospace
+$font-size: 14px
+
+// MIXINS
+=circleThing($rad, $height, $width, $bg, $color)
+    -webkit-border-radius: $rad
+    -moz-border-radius: $rad
+    -ms-border-radius: $rad
+    border-radius: $rad
+
+    height: $height
+    width: $width
+
+    line-height: $height
+    text-align: center
+
+    background: $bg
+    color: $color 
+
+    margin: 0 auto
+
+// STYLES
+body
+    background: $pale
+    font-family: $font-stack
+    font-size: $font-size
+    color: black
+
+article
+    background: white
+    width: 700px
+    padding: 20px 30px 20px 30px
+    box-sizing: border-box
+    position: relative
+    z-index: -2
+    margin: -60px auto 0
+
+header
+    +circleThing(100%, 250px, 250px, $jazz, white)
+    font-family: $font-stack
+    font-size: $font-size
+    
+footer
+    +circleThing(100%, 180px, 180px, $blues, white)
+    font-size: $font-size
+    position: relative
+    margin-top: -60px
+    z-index: -4
